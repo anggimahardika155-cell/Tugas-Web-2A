@@ -1,0 +1,253 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5px 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+
+nav {
+    background-color: rgba(30, 41, 59, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #334155;
+    color: #38bdf8;
+}
+
+
+.container-utama {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 950px;
+    margin: 40px auto;
+    gap: 25px;
+    padding: 0 20px;
+    flex: 1;
+    align-items: center;
+}
+
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px); /* Kartu naik sedikit */
+    }
+    100% {
+        transform: translateY(0px); /* Kembali ke posisi semula */
+    }
+}
+
+.floating-wrapper {
+    flex: 2.5;
+    min-width: 300px;
+    animation: floatAnimation 4s ease-in-out infinite; /* Efek memantul kontinyu */
+}
+
+.floating-wrapper-delay {
+    flex: 1;
+    min-width: 220px;
+    animation: floatAnimation 5s ease-in-out infinite; /* Efek memantul dengan durasi sedikit berbeda agar dinamis */
+    animation-delay: 1s;
+}
+
+
+.kartu-nama {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    height: 100%;
+    box-sizing: border-box;
+    border-top: 5px solid #38bdf8;
+}
+
+.kartu-nama h2 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5px 0;
+    color: #f1f5f9;
+    font-size: 1.8rem;
+}
+
+.sub-heading {
+    color: #38bdf8;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+
+.biodata-info {
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.label {
+    width: 140px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.value {
+    color: #e2e8f0;
+    flex: 1;
+}
+
+
+.deskripsi-diri h3 {
+    font-size: 1.1rem;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.deskripsi-diri p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 0;
+}
+
+
+aside {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-profil {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+aside h3 {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: #f1f5f9;
+}
+
+.aside-lokasi {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.badge-status {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+
+footer {
+    background-color: rgba(15, 23, 42, 0.8);
+    color: #64748b;
+    text-align: center;
+    padding: 18px;
+    font-size: 0.85rem;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+    .container-utama {
+        flex-direction: column;
+    }
+    
+    .info-item {
+        flex-direction: column;
+    }
+    
+    .label {
+        width: 100%;
+        margin-bottom: 2px;
+    }
+    
+
+    .floating-wrapper, .floating-wrapper-delay {
+        animation: none;
+    }
+}
