@@ -1,6 +1,6 @@
 /* membuat body berwarna abu abu dan fontnya bertipe arial sans-serif ukuran 16px */
 body {
-    background-color: gray;
+    background-color:cadetblue;
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
@@ -8,8 +8,8 @@ body {
 /* membuat canvas putih ditengah */
 .container {
     background-color: white;
-    margin: 0  auto;
-    width: 800px;    
+    margin: 0 auto;
+    width: 800px;
 }
 
 /* mengatur jarak dalam header */
@@ -22,7 +22,7 @@ body {
 /* mengatur judul */
 .header .judul {
     font-size: 40px;
-    font-weight: bold;
+    font-weight: bold;   
     margin-bottom: 5px;
 }
 
@@ -35,20 +35,74 @@ body {
 .nav li {
     /* membuat list menu navigasi menjadi horizontal dan mengatur jarak antar menu */
     display: inline-block;
-    margin-right: 10px;
-    margin-top: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
 /* mengatur link navigasi */
 .nav li a {
     /* untuk mengilangkan garis bawah pada link navigasi dan mengatur warna link animasi */
     text-decoration: none;
-    color: navy  
+    color: rgb(66, 66, 183);  
 } 
 
 /* membuat animasi saat link disorot dengan mengubah warna link menjadi merah dan menambahkan transisi */
 .nav li a:hover {
-    background-color:purple;
+    background-color:blue;
     color: white;
     transition: 0.3s;
+}
+
+/* untuk css banner */
+.banner {
+    height: 400px;
+    /* background-color: skyblue; */
+    /* berikan file gambar */
+    background-image: url('../img/banner.jpg');
+    /* atur ukuran gambar */
+    background-size: cover;
+    /* mengatur posisi gambar horizontal dan vertikal*/
+    background-position: 0px - 150px;
+    /* mengatur garis tepi tebal jenis warna */
+    border-top: 5px solid rgb(138, 138, 214);
+    border-bottom: 5px solid rgb(138, 138, 214);
+}
+/* untuk isi */
+.isi {
+    padding: 20px;
+}
+
+.isi h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.isi .penulis {
+    font-size: 14px;
+    /* agar tampak naik */
+    margin-top: -10px;
+}
+
+.isi .penulis a {
+    text-decoration: none;
+    color: purple;
+}
+
+.isi p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* untuk footer */
+.footer {
+    background-color: rgb(138, 138, 214);
+    height:50px;
+    padding: 2px;
+    
+}
+
+.footer .copyright {
+    font-size: 16px;
+    color: white;
+    text-align: center;
 }
