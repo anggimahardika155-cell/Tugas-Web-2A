@@ -1,305 +1,64 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amara Dwi Natarin - Portofolio Interior Desain</title>
-    <!-- Bootstrap 5 CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- Animate.css untuk Animasi Tambahan -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <style>
-        body {
-            background: linear-gradient(135deg, #fdfbf7 0%, #f4ece1 100%);
-            font-family: 'Poppins', sans-serif;
-            color: #4a4a4a;
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Latar Belakang Estetik dengan Ornamen Blur (Blob) */
-        .bg-blob-1 {
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 250px;
-            height: 250px;
-            background: rgba(216, 107, 132, 0.1);
-            filter: blur(50px);
-            border-radius: 50%;
-            z-index: -1;
-        }
-
-        .bg-blob-2 {
-            position: absolute;
-            bottom: -50px;
-            left: -50px;
-            width: 300px;
-            height: 300px;
-            background: rgba(200, 162, 139, 0.15);
-            filter: blur(60px);
-            border-radius: 50%;
-            z-index: -1;
-        }
-
-        /* Tipografi */
-        .brand-title, .profile-name, h2 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .brand-title {
-            color: #d86b84;
-            font-weight: 700;
-        }
-
-        .profile-name {
-            color: #3b2f2f;
-            font-style: italic;
-            font-size: 2.2rem;
-        }
-
-        /* Navbar & Menu Offcanvas */
-        .navbar {
-            background-color: transparent;
-            padding: 1.5rem 1rem;
-        }
-
-        .offcanvas {
-            background-color: rgba(253, 251, 247, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom-left-radius: 35px;
-            border-bottom-right-radius: 35px;
-            height: auto !important;
-        }
-
-        .offcanvas-body a {
-            font-size: 1.1rem;
-            color: #4a4a4a;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .offcanvas-body a:hover, .offcanvas-body a.active {
-            color: #d86b84;
-            transform: translateY(-2px);
-        }
-
-        /* Bingkai Foto Bentuk Bebas / Organik (Blob Shape) dengan Animasi Mengambang */
-        .profile-img-container {
-            width: 280px;
-            height: 340px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            animation: floatBlob 6s ease-in-out infinite, morphShape 8s ease-in-out infinite alternate;
-            border: 4px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .profile-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .profile-img-container:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Keyframes untuk Animasi Bentuk Bebas & Mengambang */
-        @keyframes floatBlob {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes morphShape {
-            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-            50% { border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%; }
-            100% { border-radius: 70% 30% 50% 50% / 30% 70% 50% 70%; }
-        }
-
-        /* Kartu Konten Section */
-        .content-section {
-            display: none;
-            animation: fadeIn 0.6s ease-in-out forwards;
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Kartu Portfolio & About */
-        .custom-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(216, 107, 132, 0.15);
-            border-radius: 20px;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .custom-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(216, 107, 132, 0.1);
-        }
-
-        /* Tombol Kustom */
-        .btn-custom {
-            background-color: #d86b84;
-            color: white;
-            border-radius: 30px;
-            padding: 8px 24px;
-            border: none;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .btn-custom:hover {
-            background-color: #c0556f;
-            color: white;
-            transform: scale(1.03);
-        }
-    </style>
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+    <!-- navbar atau menu untuk warna primary, danger, warning, success -->
+     <nav class="navbar navbar-expand-lg bg-primary navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Welcome to My Website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link active" aria-current="page" 
+        href="#">Home</a>
+        <a class="nav-link" href="#">Products</a>
+        <a class="nav-link" href="#">Service</a>
+        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-    <!-- Ornamen Latar Belakang Estetik -->
-    <div class="bg-blob-1"></div>
-    <div class="bg-blob-2"></div>
+<!-- hero image atau banner -->
+ <div class="container text-center mt-5">
+    <img src="img/images.jpg" alt="Hero Image">
+ </div>
 
-    <!-- Header / Navigasi -->
-    <nav class="navbar navbar-light">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand brand-title fs-4" href="#" onclick="showSection('home')">Amara</a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuNavbar" aria-controls="menuNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Menu Offcanvas (Navigasi Atas) -->
-    <div class="offcanvas offcanvas-top shadow-sm" tabindex="-1" id="menuNavbar">
-        <div class="offcanvas-header px-4 pt-4">
-            <h5 class="offcanvas-title brand-title fs-4">Menu Navigasi</h5>
-            <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body px-4 pb-4 text-center">
-            <ul class="navbar-nav mx-auto gap-3 py-2">
-                <li class="nav-item"><a class="nav-link nav-item-click active" href="#" onclick="switchMenu('home')">Home</a></li>
-                <li class="nav-item"><a class="nav-link nav-item-click" href="#" onclick="switchMenu('about')">About</a></li>
-                <li class="nav-item"><a class="nav-link nav-item-click" href="#" onclick="switchMenu('portfolio')">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link nav-item-click" href="#" onclick="switchMenu('contact')">Contact</a></li>
-            </ul>
+    <!-- bagian artikel -->
+    <div class="container">
+        <div class="row">
+            <!-- column 1 -->
+            <div class="col-md">
+                 <h2>Judul Artikel</h2>
+                <p class="text-muted">Oleh - Anggi Mahardika 29 September 2026</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, ut molestias est labore placeat iusto repellendus quo accusantium dignissimos, iure libero eius itaque officia recusandae doloribus necessitatibus ipsum reprehenderit debitis.</p>
+                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatem id enim alias sit eveniet eligendi qui dolores iure, totam laudantium voluptates, soluta exercitationem labore nisi! Eaque vero illo neque.</span><span>Maxime ratione nam esse illo, molestiae dicta ex sed! Corporis nesciunt quam distinctio voluptatum vitae animi unde dolorum aut facilis, magni commodi mollitia deleniti dolorem debitis voluptates sed consectetur inventore.</span><span>Laudantium soluta corrupti sit odit illo provident? Molestiae veritatis quis quas! Amet eius a natus placeat dicta cum accusantium exercitationem, facere mollitia obcaecati rerum similique blanditiis modi iste quod eveniet.</span></p>
+                </div>
+            <!-- column 2 -->
+            <div class="col-md">
+                <h2>Judul Artikel</h2>
+                <p class="text-muted">Oleh - Anggi Mahardika 29 September 2026</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, ut molestias est labore placeat iusto repellendus quo accusantium dignissimos, iure libero eius itaque officia recusandae doloribus necessitatibus ipsum reprehenderit debitis.</p>
+                <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatem id enim alias sit eveniet eligendi qui dolores iure, totam laudantium voluptates, soluta exercitationem labore nisi! Eaque vero illo neque.</span><span>Maxime ratione nam esse illo, molestiae dicta ex sed! Corporis nesciunt quam distinctio voluptatum vitae animi unde dolorum aut facilis, magni commodi mollitia deleniti dolorem debitis voluptates sed consectetur inventore.</span><span>Laudantium soluta corrupti sit odit illo provident? Molestiae veritatis quis quas! Amet eius a natus placeat dicta cum accusantium exercitationem, facere mollitia obcaecati rerum similique blanditiis modi iste quod eveniet.</span></p>
+            </div>
         </div>
     </div>
 
-    <!-- Konten Utama Dinamis -->
-    <main class="container py-3 mb-5">
-        
-        <!-- BAGIAN: HOME -->
-        <section id="home" class="content-section active text-center animate__animated animate__fadeIn">
-            <!-- Foto Bentuk Bebas / Organik -->
-            <div class="profile-img-container mb-4">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Amara Dwi Natarin">
-            </div>
+    <!-- buat footer -->
+     <footer class="bg-dark text-white text-center py-3 mt-5">
+        Created with ❤️ by Anggi Mahardika - 2026
+     </footer>
 
-            <p class="text-muted small mb-1">Selamat datang di profil saya</p>
-            <h1 class="profile-name mb-3">Amara<br><span style="color: #d86b84;">Dwi Natarin</span></h1>
-            
-            <p class="text-secondary px-3 mx-auto mb-4" style="font-size: 0.9rem; max-width: 400px;">
-                Mahasiswa / Praktisi Desain Interior yang berfokus menciptakan ruang estetis, fungsional, dan sesuai kepribadian penghuninya.
-            </p>
-            <button class="btn btn-custom shadow-sm" onclick="switchMenu('portfolio')">Lihat Portfolio</button>
-        </section>
-
-        <!-- BAGIAN: ABOUT -->
-        <section id="about" class="content-section text-center">
-            <h2 class="mb-3" style="color: #3b2f2f;">Tentang Saya</h2>
-            <div class="custom-card text-start mx-auto shadow-sm" style="max-width: 450px;">
-                <p class="small text-secondary mb-3">
-                    Halo! Saya Amara Dwi Natarin, seorang yang memiliki kecintaan mendalam pada dunia tata ruang dan desain interior estetis. Saya percaya bahwa setiap sudut ruangan memiliki cerita dan karakter tersendiri.
-                </p>
-                <h6 class="text-dark fw-bold mb-2">Keahlian & Minat:</h6>
-                <ul class="small text-secondary ps-3 mb-0">
-                    <li>Perencanaan Tata Ruang (Space Planning)</li>
-                    <li>3D Modeling & Visualisasi Ruang</li>
-                    <li>Konsep Desain Minimalis & Hangat</li>
-                    <li>Pemilihan Material & Pencahayaan</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- BAGIAN: PORTFOLIO -->
-        <section id="portfolio" class="content-section text-center">
-            <h2 class="mb-3" style="color: #3b2f2f;">Portofolio Karya</h2>
-            <div class="row g-3 justify-content-center" style="max-width: 500px; margin: 0 auto;">
-                <div class="col-12">
-                    <div class="custom-card text-start">
-                        <h5 class="brand-title fs-6 mb-1">Kafe Minimalis "Robucca"</h5>
-                        <p class="small text-muted mb-2">Konsep pencahayaan hangat dengan sentuhan tanaman hijau indoor.</p>
-                        <span class="badge bg-light text-dark border">Interior Desain</span>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="custom-card text-start">
-                        <h5 class="brand-title fs-6 mb-1">Apartemen Studio Modern</h5>
-                        <p class="small text-muted mb-25">Optimalisasi ruang terbatas dengan furnitur multifungsi bergaya estetis.</p>
-                        <span class="badge bg-light text-dark border">Space Planning</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BAGIAN: CONTACT -->
-        <section id="contact" class="content-section text-center">
-            <h2 class="mb-3" style="color: #3b2f2f;">Hubungi Saya</h2>
-            <div class="custom-card text-center mx-auto shadow-sm" style="max-width: 450px;">
-                <p class="small text-secondary mb-3">Tertarik berkolaborasi atau ingin berdiskusi mengenai proyek desain interior? Silakan hubungi saya melalui:</p>
-                <div class="d-grid gap-2">
-                    <a href="mailto:amara@example.com" class="btn btn-outline-dark btn-sm rounded-pill">📧 Email: amara.natarin@example.com</a>
-                    <a href="https://instagram.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-pill">📸 Instagram: @amaranatarin</a>
-                    <a href="https://linkedin.com" target="_blank" class="btn btn-outline-dark btn-sm rounded-pill">💼 LinkedIn: Amara Dwi Natarin</a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Bootstrap 5 JS & Script Transisi Menu -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function switchMenu(sectionId) {
-            // Sembunyikan semua section
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(sec => sec.classList.remove('active'));
-
-            // Tampilkan section yang dipilih
-            const target = document.getElementById(sectionId);
-            if (target) {
-                target.classList.add('active');
-            }
-
-            // Tutup menu offcanvas secara otomatis jika terbuka di HP
-            const offcanvasElement = document.getElementById('menuNavbar');
-            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
-            if (offcanvas) {
-                offcanvas.hide();
-            }
-
-            // Atur status aktif pada link menu
-            const navLinks = document.querySelectorAll('.nav-item-click');
-            navLinks.forEach(link => link.classList.remove('active'));
-            
-            event.preventDefault();
-        }
-    </script>
+    <!-- javascript code bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
