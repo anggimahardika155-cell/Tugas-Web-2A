@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Comel ✨</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff0f5; /* Lavender blush / pink pastel yang comel */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .kotak-utama {
+            background: #ffffff;
+            width: 380px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+            text-align: center;
+            border: 3px dashed #ffb6c1;
+        }
+
+        h2 {
+            color: #ff69b4;
+            margin-bottom: 5px;
+            font-size: 22px;
+        }
+
+        p {
+            color: #888888;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.6);
+        }
+
+        button:hover {
+            background-color: #ff69b4;
+            transform: translateY(-2px);
+        }
+
+        #hasilStruk {
+            display: none;
+            margin-top: 25px;
+            background-color: #fffaf0; /* Putih gading hangat */
+            color: #555555;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            border: 2px solid #ffe4e1;
+        }
+
+        .total-akhir {
+            color: #ff1493;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kotak-utama">
+    <h2>🌸 Kasir Comel 🌸</h2>
+    <p>Klik tombol di bawah untuk mulai mencatat belanjaanmu, ya!</p>
+    
+    <button onclick="jalankanKasir()">✨ Mulai Hitung Belanja ✨</button>
+
+    <!-- Area Struk Belanja -->
+    <div id="hasilStruk"></div>
+</div>
+
+<script type="text/javascript">
+    function jalankanKasir() {
+        // 1, 2, 3. Input nama barang, harga barang, dan jumlah beli (qty)
+        let namaBarang = prompt("🌸 Masukkan nama barang belanjaanmu:");
+        if (!namaBarang) return; // Berhenti jika dibatalkan
+
+        let hargaBarang = parseFloat(prompt("💰 Masukkan harga barang per satuan:")) || 0;
+        let qty = parseInt(prompt("🔢 Masukkan jumlah beli (qty):")) || 0;
+
+        // Validasi input angka
+        if (hargaBarang <= 0 || qty <= 0) {
+            alert("⚠️ Harga atau jumlah beli tidak boleh kosong/nol ya!");
+            return;
+        }
+
+        // Perhitungan total kotor
+        let totalKotor = hargaBarang * qty;
+        let diskon = 0;
+        let totalAkhir = totalKotor;
+
+        // 4. Kriteria: Jika pembelian lebih dari 50.000, dapat diskon 10% dari total
+        if (totalKotor > 50000) {
+            diskon = 0.10 * totalKotor;
+            totalAkhir = totalKotor - diskon;
+        }
+
+        // Format angka ke format mata uang Rupiah
+        const formatRp = (angka) => {
+            return angka.toLocaleString('id-ID');
+        };
+
+        // 5. Membuat tampilan struk belanja yang rapi dan manis
+        let struk = `----------------------------------------<br>`;
+        struk += `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✨ STRUK BELANJA ✨<br>`;
+        struk += `----------------------------------------<br>`;
+        struk += `Nama Barang : ${namaBarang}<br>`;
+        struk += `Harga Satuan: Rp ${formatRp(hargaBarang)}<br>`;
+        struk += `Jumlah Beli : ${qty}<br>`;
+        struk += `Total Kotor : Rp ${formatRp(totalKotor)}<br>`;
+
+        if (diskon > 0) {
+            struk += `Diskon 10%  : -Rp ${formatRp(diskon)} <span style="color:#ff69b4;">(Hemat!)</span><br>`;
+        }
+
+        struk += `----------------------------------------<br>`;
+        struk += `<span class="total-akhir">Total Bayar : Rp ${formatRp(totalAkhir)}</span><br>`;
+        struk += `----------------------------------------<br>`;
+        struk += `<center style="color: #ff69b4; font-weight: bold;">💖 Terima Kasih, Senang Melayanimu! 💖</center>`;
+
+        // Menampilkan hasil struk ke dalam kotak web
+        let kotakStruk = document.getElementById("hasilStruk");
+        kotakStruk.innerHTML = struk;
+        kotakStruk.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
